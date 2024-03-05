@@ -1,0 +1,11 @@
+<%= form_with model: @article do |f| %>
+  <div class="shadow-sm rounded px-4 py-3 mb-2 border d-flex">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="shadow-sm rounded px-4 py-3 mb-2 border d-flex">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+  <%= f.submit 'Envoyez !', class: 'btn btn-primary' %>
+<% end %>

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div>
+        <h1>
+          <%=@article.title %>
+          <%= link_to edit_article_path(@article), class: 'text-decoration-none' do %>
+            <i class="fa fa-pencil"></i>
+          <% end %>
+          <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'text-decoration-none' do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
+        </h1>
+        <p><%= @article.content %></p>
+      </div>
+    </div>
+  </div>
+  <%= link_to 'Back', articles_path %>
+</div>
